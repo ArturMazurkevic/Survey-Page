@@ -1,234 +1,99 @@
 <!DOCTYPE html>
- <html lang="en">
- <meta charset=”utf-8”>
+<html lang="en">
+  <meta charset=”utf-8”>
   <meta name=”viewport” content=”width=device-width, initial-scale=1.0”>
-    <head>
-     <title>Survey Form</title>
-     <link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet">
-     <link href="https://fonts.googleapis.com/css2?family=Kanit&family=Prompt&display=swap" rel="stylesheet">
-      <style>
+  <head>
+    <title>Survey Form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&family=Prompt&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
 
-body {
- color: rgba(245, 247, 248, 0.85);
- font-family: 'Prompt' sans-serif;
- font-size: 20px;
-}
+  <body>
+    <div class="main">
+      <h1 id=title> Artur's First Survey Form</h1>
+      <p id> Example been taken from freeCodeCamp</p>
 
-.main {
- position: fixed;
- top: 0;
- left:0;
- right: 0;
- bottom: 0;
- background-image: url("photo.jpg");
- background-repeat: no-repeat;
- overflow-x: scroll;
- }
-
-.main::after {
- content: "";
- background-color:  rgba(58, 58, 158, 0.8);
- position: fixed;
- right: 0;
- left: 0;
- bottom: 0;
- top: 0;
- z-index: 0
- }
-
-.main-content {
- display: flex;
- flex-direction: column;
- margin: 0 auto;
- margin-bottom: 40px;
- padding: 40px;
- max-width: 710px;
- background-color: rgba(22, 22, 60, 0.7);
- border-radius: 15px;
- z-index: 2;
- position: relative;
- }
-
-.main > h1,
-.main > p  {
- text-align: center;
- position: relative;
- color: white;
- z-index: 1;
-}
-
-#email, #name, #number {
-  display: block;
-  height: 35px;
-  width: 700px;
-  border-radius: 5px;
-  margin-bottom: 40px;
-  border: none;
-}
-
-#dropdown {
-  display: block;
-  height: 40px;
-  width: 706px;
-  margin-bottom: 40px;
-  border-radius: 10px;
-  border: none;
-  font-size: 14px;
-  font-family: 'Prompt' sans-serif;
-}
-
-#dropdown2 {
-  margin-top: 25px;
-  display: block;
-  width: 706px;
-  height: 40px;
-  margin-bottom: 40px;
-  border-radius: 10px;
-  border: none;
-  font-family: 'Prompt' sans-serif;
-  font-size: 14px;
-}
-
-label {
-  display: block;
-}
-
-label[for=name],
-label[for=email],
-label[for=number],
-label[for=dropdown]  {
-  display: inline-block;
-  margin-bottom: 10px;
-}
-
-label[for=dropdown2] {
-  margin-top: 20px;
-  margin-bottom: -15px;
-}
-
-label[for=comment] {
-  margin-top: 20px;
-}
-
-#Yes, #No, #NotSure {
-  margin-bottom: 15px;
-}
-
-#hours1, #hours2, #hours3, #hours4 {
-  margin-bottom: 10px;
-  padding-bottom: 20px;
-}
-
-span {
-  display: inline-block;
-  position: relative;
-  top: 3px;
-  left:3px;
-}
-
-#comment {
-  display: inline-block;
-  width: 700px;
-  height: 150px;
-  margin-top: 10px;
-  margin-bottom: 40px;
-}
-
-input,#number[type='text']::placeholder {
-  padding-left: 5px;
-  font-size: 15px;
-}
-
-button {
-  height: 45px;
-  width: 706px;
-  border-radius: 10px;
-  background-color: rgba(117, 225, 10, 0.9);
-  border: none;
-  font-family: 'Kanit', sans-serif;
-  font-size: 20px;
-  color: white;
-  font-stretch: ultra-expanded;
-}
-
-button:hover {
-  cursor: pointer;
-  border: 2px solid rgba(39, 196, 245, 0.8);
-}
-
-textarea {
-  font-size: 16px;
-}
-
-
-
-</style>
-</head>
-
- <body>
-  <div class="main">
-    <h1 id=title> Artur's First Survey Form</h1>
-     <p id> Example been taken from freeCodeCamp</p>
       <div class="main-content">
-         <form id="survey-form">
-           <label for="name" id="name-label">Name</label>
+        <form id="survey-form">
+          <div class="form-field">
+            <label for="name" id="name-label">Name</label>
             <input id="name" type="text" placeholder="Enter Your Name" required>
-             <label for="email" id="email-label">Email</label>
-              <input id="email" type="text" placeholder="Enter Your Email" required>
-                <label for="number" id="number-label">Age</label>
-                  <input id="number" type="number" min="0" max="100" placeholder="Enter Your Age" required>
-                   <label for="dropdown">What job role in web development you are interessted in?</label>
-                    <select id="dropdown" name="dropdown">
-                      <option>Choose one option</option>
-                      <option>Frontend Web Developer</option>
-                      <option>Backend Web Developer</option>
-                      <option>Full Stack Web Developer</option>
-                      <option>Web Designer</option>
-                      <option>Mobile App Developer</option>
-                    </select>
+          </div>
 
-                     <p>Would you like to learn this skills with us?</p>
-                      <label for="Yes">
-                        <input id="Yes" value="yes" type="radio" name="Yes-No-NotSure"><span>Yes</span>
-                      </label>
-                      <label for="No">
-                        <input id="No" value="no" type="radio" name="Yes-No-NotSure"><span>No</span>
-                      </label>
-                      <label for="NotSure">
-                        <input id="NotSure" value="notsure" type="radio" name="Yes-No-NotSure"><span>Not sure</span>
-                      </label>
+          <div class="form-field">
+            <label for="email" id="email-label">Email</label>
+            <input id="email" type="text" placeholder="Enter Your Email" required>
+          </div>
 
-                      <label for="dropdown2">Why would like to start a career as a Web Developer?</label>
-                       <select id="dropdown2" name="dropdown2">
-                         <option>Choose one option</option>
-                         <option>Remote work possibility</option>
-                         <option>New challenges</option>
-                         <option>Salary</option>
-                         <option>Gaining new skills</option>
-                         <option>Passion for Computing</option>
-                       </select>
+          <div class="form-field">
+            <label for="number" id="number-label">Age</label>
+            <input id="number" type="number" min="0" max="100" placeholder="Enter Your Age" required>
+          </div>
 
-                       <p>How many hours a week you can spend for learning Web Development?</p>
-                        <label for="hours1">
-                         <input id="hours1" value="hours1" type="checkbox" name="hours1-hours2-hours3-hours4"><span>0-5 hours a week</span>
-                        </label>
-                        <label for="hours2">
-                         <input id="hours2" value="hours2" type="checkbox" name="hours1-hours2-hours3-hours4"><span>5-10 hours a week</span>
-                        </label>
-                        <label for="hours3">
-                         <input id="hours3" value="hours3" type="checkbox" name="hours1-hours2-hours3-hours4"><span>10-15 hours a week</span>
-                        </label>
-                        <label for="hours4">
-                         <input id="hours4" value="hours4" type="checkbox" name="hours1-hours2-hours3-hours4"><span>15-20 hours a week</span>
-                        </label>
+          <div class="form-field">
+            <label for="dropdown">What job role in web development you are interessted in?</label>
+            <select id="dropdown" name="dropdown">
+              <option>Choose one option</option>
+              <option>Frontend Web Developer</option>
+              <option>Backend Web Developer</option>
+              <option>Full Stack Web Developer</option>
+              <option>Web Designer</option>
+              <option>Mobile App Developer</option>
+            </select>
+          </div>
 
-                        <label for="comment">Any Questions? </label>
-                          <textarea id="comment"  placeholder="Ask your question..."></textarea>
+          <div class="form-field">
+           <p>Would you like to learn this skills with us?</p>
+            <label for="Yes">
+              <input id="Yes" value="yes" type="radio" name="Yes-No-NotSure"><span>Yes</span>
+            </label>
+            <label for="No">
+              <input id="No" value="no" type="radio" name="Yes-No-NotSure"><span>No</span>
+            </label>
+            <label for="NotSure">
+              <input id="NotSure" value="notsure" type="radio" name="Yes-No-NotSure"><span>Not sure</span>
+            </label>
+          </div>
 
-                        <button type="submit">Submit</button>
+          <div class="form-field">
+            <label for="dropdown2">Why would like to start a career as a Web Developer?</label>
+             <select id="dropdown2" name="dropdown2">
+               <option>Choose one option</option>
+               <option>Remote work possibility</option>
+               <option>New challenges</option>
+               <option>Salary</option>
+               <option>Gaining new skills</option>
+               <option>Passion for Computing</option>
+             </select>
+           </div>
 
-        </form>
+           <div class="form-field">
+             <p>How many hours a week you can spend for learning Web Development?</p>
+              <label for="hours1">
+               <input id="hours1" value="hours1" type="checkbox" name="hours1-hours2-hours3-hours4"><span>0-5 hours a week</span>
+              </label>
+              <label for="hours2">
+               <input id="hours2" value="hours2" type="checkbox" name="hours1-hours2-hours3-hours4"><span>5-10 hours a week</span>
+              </label>
+              <label for="hours3">
+               <input id="hours3" value="hours3" type="checkbox" name="hours1-hours2-hours3-hours4"><span>10-15 hours a week</span>
+              </label>
+              <label for="hours4">
+               <input id="hours4" value="hours4" type="checkbox" name="hours1-hours2-hours3-hours4"><span>15-20 hours a week</span>
+              </label>
+            </div>
+
+            <div class="form-field">
+              <label for="comment">Any Questions? </label>
+              <textarea id="comment"  placeholder="Ask your question..."></textarea>
+            </div>
+
+            <div class="submit-btn">
+              <button type="submit">Submit</button>
+            </div>
+          </form>
+      </div>
     </div>
-  </div>
- </body>
+  </body>
 </html>
