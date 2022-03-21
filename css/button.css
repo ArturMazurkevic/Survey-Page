@@ -3,7 +3,7 @@ button {
   width: 706px;
   border-radius: 5px;
   background-color: rgba(117, 225, 10, 0.9);
-  border: none;
+  border: 30px solid red;
   font-family: 'Kanit', sans-serif;
   font-size: 40px;
   color: white;
