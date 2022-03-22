@@ -132,3 +132,19 @@ input,#number[type='text']::placeholder {
 textarea {
   font-size: 16px;
 }
+button {
+  height: 45px;
+  width: 706px;
+  border-radius: 5px;
+  background-color: rgba(117, 225, 10, 0.9);
+  border: none;
+  font-family: 'Kanit', sans-serif;
+  font-size: 20px;
+  color: white;
+  font-stretch: ultra-expanded;
+}
+
+button:hover {
+  cursor: pointer;
+  border: 2px solid rgba(39, 196, 245, 0.8);
+}
